@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css"/>
+    <title>Gallery</title>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar_logo">
+        <img src="image/coffee.png" height="60" width="60" alt="커피갤러리 이미지">
+        <a th:href="@{/}">마루 & 빵남봉</a>
+    </div>
+    <ul class="navbar_categories"> <!--ul =unorder list-->
+        <li><a th:href="@{/board/list}">커피갤러리</a></li>
+        <li><a th:href="@{/board/list}">코딩갤러리</a></li>
+        <li><a th:href="@{/board/list}">배필갤러리</a></li>
+        <li><a th:href="@{/board/list}">취업갤러리</a></li>
+    </ul>
+</nav>
+<form class="hidden" id="login-form">
+    <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="ID"/>
+    <input type="password" placeholder="PW"/>
+    <button>Log In</button>
+</form>
+<h1 id="greeting" class="hidden"></h1>
+<div class="board_wrap">
+    <div class="board_title">
+        <strong>공지사항</strong>
+        <p>마루 & 빵남봉 커뮤니티에 오신것을 환영합니다.</p> <!--p tag = paragraph-->
+    </div>
+    <div class="board_gallery_wrap">
+        <div class="board_gallery">
+            <div>
+                <div class="board"><a th:href="@{/board/list}">커피 갤러리</a></div>
+            </div>
+            <div>
+                <div class="board"><a th:href="@{/board/list}">코딩 갤러리</a></div>
+            </div>
+            <div>
+                <div class="board"><a th:href="@{/board/list}">배필 갤러리</a></div>
+            </div>
+            <div>
+                <div class="board"><a th:href="@{/board/list}">취업 갤러리</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="javascript/main.js"></script>
+</body>
+</html>
